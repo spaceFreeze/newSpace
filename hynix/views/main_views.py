@@ -96,7 +96,7 @@ bp = Blueprint('main', __name__, url_prefix='/')
 @bp.route('/first')
 def first_db():
     try:
-        new_df = pd.read_csv("[2022.02.16]All_to_result.csv")
+        new_df = pd.read_csv("[2022.03.11]All_to_result.csv")
         # 기존 db에 반복되는 내용이 있는지 체크한 후 DB에 추가
         # query -> dataframe
         n_li = []

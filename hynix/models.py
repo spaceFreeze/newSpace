@@ -108,10 +108,10 @@ class News(db.Model):   # list1용 DB(뉴스기사 본문 관련)
     @property
     def hash_count(self):   # list2
         return {    # 각 키워드 페이지(섹션/기업)별 키워드 수 count 하기 위해 키워드만 return
-            'hash1': str(self.hash1)[1:],
-            'hash2': str(self.hash2)[1:],
-            'hash3': str(self.hash3)[1:],
-            'hash4': str(self.hash4)[1:]
+            'hash1': self.hash1,
+            'hash2': self.hash2,
+            'hash3': self.hash3,
+            'hash4': self.hash4
         }
 
 

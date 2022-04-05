@@ -26,7 +26,7 @@ def add_new(new_df, i):
 # 해시태그 클릭 시 보이는 기사들(json) list1 return
 def li1_hash(section, name, hashtag):
     n_li = []
-    hashtag = str("#") + hashtag
+    # hashtag = str("#") + hashtag
     # 특정 해시태그를 포함하고 있는지 확인
     conds = [News.hash1 == hashtag, News.hash2 == hashtag, News.hash3 == hashtag, News.hash4 == hashtag]
     if section == "all" and name == "all":  # 모든 쿼리 - 메인화면에서 해시태그 눌렀을 때
@@ -102,7 +102,7 @@ bp = Blueprint('hash_tag', __name__, url_prefix='/hash')
 @bp.route('/first')
 def hash_db():
     try:
-        new_df = pd.read_csv("[2022.02.16]All_hashtag.csv")
+        new_df = pd.read_csv("[2022.03.11_2022.03.17]All_hashtag.csv")
         # 기존 db에 반복되는 내용이 있는지 체크한 후 DB에 추가
         # query -> dataframe
         n_li = []
