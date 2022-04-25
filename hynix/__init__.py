@@ -3,6 +3,7 @@ from flask_migrate import Migrate
 from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import MetaData
+# import config     # config 폴더 생성 후 주석 처리
 
 # sqlite 오류 방지
 naming_convention = {
@@ -20,8 +21,10 @@ migrate = Migrate()
 def create_app():
     app = Flask(__name__)
     CORS(app)
-    # app.config.from_object(config)
+    # app.config.from_object(config)    # config 폴더 따로 생성 후 수정
     # 환경변수 APP_CONFIG_FILE에 정의된 파일을 환경 파일로 사용할 것
+    # sksk.cmd 파일 수정해야됨
+    # set APP_CONFIG_FILE=c:\projects\sksk\config\development.py
     app.config.from_envvar('APP_CONFIG_FILE')
 
     # ORM

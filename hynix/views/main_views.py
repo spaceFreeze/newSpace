@@ -10,6 +10,8 @@ from hynix import db
 from hynix.models import News
 from hynix.views.hash_views import li1_hash, li2_hash
 
+from datetime import datetime, timedelta
+
 
 def alchemyencoder(obj):
     if isinstance(obj, datetime.date):
@@ -88,6 +90,29 @@ def res_json(li_1, section, name, pagenum, count):
 
 # 기존 url에 새롭게 추가하고 싶을 때 @bp.route를 추가하면 됨
 bp = Blueprint('main', __name__, url_prefix='/')
+
+
+@bp.route('/test')
+def test():
+    try:
+        # now = datetime.now()
+        # last = (now - timedelta(weeks=1)).strftime("%Y/%m/%d")  # 일주일 전 날짜
+        # print(last)     # ex)2022/03/31
+
+        # 일단 csv에 있는 날짜로 테스트
+        today = "2022/03/16"
+        last = "%{}%".format(today)
+        print(last)
+        
+        ex_news = News.query.filter(News.date.like(last)).all()
+        for o in ex_news:   # ex_news는 News 객체들 리스트
+            db.session.delete(o)
+        db.session.commit()
+        print("쿼리 삭제!")
+        return "쿼리 삭제 성공!"
+    except sqlalchemy.exc.SQLAlchemyError as e:
+        # db.session.rollback()
+        return f'error! {e}'
 
 
 # 최초로 한 번만 실행해주기! (일단 테스트용으로 csv 읽어와서 DB에 저장함)
