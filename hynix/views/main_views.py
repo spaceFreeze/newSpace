@@ -4,7 +4,7 @@ import json
 
 import pandas as pd
 import sqlalchemy.exc
-from flask import Blueprint
+from flask import Blueprint, render_template
 
 from hynix import db
 from hynix.models import News
@@ -90,6 +90,11 @@ def res_json(li_1, section, name, pagenum, count):
 
 # 기존 url에 새롭게 추가하고 싶을 때 @bp.route를 추가하면 됨
 bp = Blueprint('main', __name__, url_prefix='/')
+
+
+@bp.route('/')
+def main():
+    return render_template('index.html')
 
 
 @bp.route('/test')
