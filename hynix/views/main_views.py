@@ -126,7 +126,7 @@ def test():
 @bp.route('/first')
 def first_db():
     try:
-        new_df = pd.read_csv("[2022.03.11]All_to_result.csv")
+        new_df = pd.read_csv("[2022.03.11]All_to_result.csv", encoding='utf-8-sig')
         # 기존 db에 반복되는 내용이 있는지 체크한 후 DB에 추가
         # query -> dataframe
         n_li = []
@@ -144,8 +144,8 @@ def first_db():
         for i in range(len(new_df)):
             if not original_data.empty:  # 기존 DB에 내용이 있고
                 # 기존 DB와 내용(기사제목 & 회사명)이 겹친다면 데이터 추가 불허용
-                if new_df.iloc[i][2] in original_data['title'].unique()\
-                        and new_df.iloc[i][6] in original_data['name'].unique():
+                if new_df.iloc[i][4] in original_data['title'].unique()\
+                        and new_df.iloc[i][8] in original_data['name'].unique():
                     print("중복!")
                 else:   # 중복되는 내용이 없으면 데이터 추가 허용
                     add_new(new_df, i)

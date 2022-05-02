@@ -129,8 +129,8 @@ class Hash(db.Model):   # list2용 DB(해시태그 - 금주의 키워드 관련)
     @property
     def serialize(self):    # all/all list2 해시태그
         return {
-            'size': round(self.weight, 2),
-            'text': self.hashtag
+            'weight': round(self.weight, 2),
+            'hashtag': self.hashtag
         }
 
         # 밑에는 무시--------------------------------------------------------------------------

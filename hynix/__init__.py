@@ -33,6 +33,10 @@ def create_app():
         migrate.init_app(app, db, render_as_batch=True)
     else:
         migrate.init_app(app, db)
+
+    with app.app_context():
+        db.create_all()
+
     from . import models
 
     # 블루프린트

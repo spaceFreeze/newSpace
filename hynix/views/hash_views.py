@@ -73,16 +73,16 @@ def li2_hash(section="all", name="all", count=0):
             df2 = pd.DataFrame(o_df.iloc[:, 1])
             df3 = pd.DataFrame(o_df.iloc[:, 2])
             df4 = pd.DataFrame(o_df.iloc[:, 3])
-            df1.columns = ['text']
-            df2.columns = ['text']
-            df3.columns = ['text']
-            df4.columns = ['text']
+            df1.columns = ['hashtag']
+            df2.columns = ['hashtag']
+            df3.columns = ['hashtag']
+            df4.columns = ['hashtag']
             df = pd.concat([df1, df2, df3, df4])
 
-            c_df = df['text'].value_counts()  # 키워드별 카운트
+            c_df = df['hashtag'].value_counts()  # 키워드별 카운트
             res = c_df.reset_index()
-            res.columns = ['text', 'size']
-            res = res.reindex(columns=['size', 'text'])
+            res.columns = ['hashtag', 'weight']
+            res = res.reindex(columns=['weight', 'hashtag'])
             # h_li = c_df.index.tolist()
             # [ "#울트라", "#삼성전자", "#시장", ..., "#출시" ]
             h_li = res.to_dict('records')
@@ -102,7 +102,7 @@ bp = Blueprint('hash_tag', __name__, url_prefix='/hash')
 @bp.route('/first')
 def hash_db():
     try:
-        new_df = pd.read_csv("[2022.03.11_2022.03.17]All_hashtag.csv")
+        new_df = pd.read_csv("[2022.03.11_2022.03.17]All_hashtag.csv", encoding='utf-8-sig')
         # 기존 db에 반복되는 내용이 있는지 체크한 후 DB에 추가
         # query -> dataframe
         n_li = []
@@ -116,7 +116,7 @@ def hash_db():
         for i in range(len(new_df)):
             if not original_data.empty:  # 기존 DB에 내용이 있고
                 # 기존 DB와 내용이 겹친다면 데이터 추가 불허용
-                if new_df.iloc[i][1] in original_data['hashtag'].unique():
+                if new_df.iloc[i][0] in original_data['hashtag'].unique():
                     print("중복!")
                 else:  # 중복되는 내용이 없으면 데이터 추가 허용
                     add_new(new_df, i)
