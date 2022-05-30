@@ -1,0 +1,472 @@
+<html lang="en" style="height: auto;"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="dist/img/NewSpaceLogo.png">
+  <title>NewSpace</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+  </style>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+</head>
+<body class="sidebar-mini layout-fixed" style="height: auto;">
+<div class="wrapper">
+
+  <!-- Preloader -->
+  <div class="preloader flex-column justify-content-center align-items-center" style="height: 0px;">
+    <img class="animation__shake" alt="Logo" height="60" width="60" style="display: none;">
+  </div>
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="index.html" class="nav-link">Home</a>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="index.html" class="brand-link">
+      <img src="dist/img/NewSpaceLogo.png" alt="NewSpace Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">NewSpace</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar os-host os-theme-light os-host-resize-disabled os-host-scrollbar-horizontal-hidden os-host-scrollbar-vertical-hidden os-host-transition"><div class="os-resize-observer-host observed"><div class="os-resize-observer" style="left: 0px; right: auto;"></div></div><div class="os-size-auto-observer observed" style="height: calc(100% + 1px); float: left;"><div class="os-resize-observer"></div></div><div class="os-content-glue" style="margin: 0px -8px; width: 249px; height: 869px;"></div><div class="os-padding"><div class="os-viewport os-viewport-native-scrollbars-invisible"><div class="os-content" style="padding: 0px 8px; height: 100%; width: 100%;">
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <li class="nav-item menu-open" id="sections">
+            <a href="#" class="nav-link" id="sectionsTitle">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Sections
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link" onclick="menuEvent(this, 'sections');" id="menu1">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>경제</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link" onclick="menuEvent(this, 'sections');" id="menu2">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>IT</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link" onclick="menuEvent(this, 'sections');" id="menu3">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>사회</p>
+                </a>
+              </li>
+           <li class="nav-item">
+                <a href="#" class="nav-link" onclick="menuEvent(this, 'sections');" id="menu4">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>세계</p>
+                </a>
+              </li>
+           <li class="nav-item">
+                <a href="#" class="nav-link" onclick="menuEvent(this, 'sections');" id="menu5">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>생활</p>
+                </a>
+              </li>
+           <li class="nav-item">
+                <a href="#" class="nav-link" onclick="menuEvent(this, 'sections');" id="menu6">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>정치</p>
+                </a>
+              </li>
+           <li class="nav-item">
+                <a href="#" class="nav-link" onclick="menuEvent(this, 'sections');" id="menu7">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>오피니언</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item menu-is-opening menu-open">
+            <a href="#" class="nav-link" id="enterprisesTitle">
+              <i class="nav-icon fas fa-tree"></i>
+              <p>
+                Enterprises
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item" id="idm">
+                <a href="#" class="nav-link" id="idmTitle">
+                  <i class="nav-icon far fa-circle text-info"></i>
+                  <p>
+                    IDM
+                    <i class="fas fa-angle-left right"></i>
+                         <span class="badge badge-info right">12</span>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview" style="display: none;">
+                      <li class="nav-item">
+                      <a href="#" class="nav-link" onclick="menuEvent(this, 'idm');" id="menu8">
+                                  <i class="far fa-circle nav-icon"></i>
+                                  <p>SK하이닉스</p>
+                                </a>
+                              </li>
+                              <li class="nav-item">
+                      <a href="#" class="nav-link" onclick="menuEvent(this, 'idm');" id="menu9">
+                                  <i class="far fa-circle nav-icon"></i>
+                                  <p>인텔</p>
+                                </a>
+                              </li>
+                              <li class="nav-item">
+                      <a href="#" class="nav-link" onclick="menuEvent(this, 'idm');" id="menu10">
+                                  <i class="far fa-circle nav-icon"></i>
+                                  <p>삼성전자</p>
+                                </a>
+                              </li>
+                              <li class="nav-item">
+                      <a href="#" class="nav-link" onclick="menuEvent(this, 'idm');" id="menu11">
+                                  <i class="far fa-circle nav-icon"></i>
+                                  <p>마이크론</p>
+                                </a>
+                              </li>
+                              <li class="nav-item">
+                      <a href="#" class="nav-link" onclick="menuEvent(this, 'idm');" id="menu12">
+                                  <i class="far fa-circle nav-icon"></i>
+                                  <p>도시바</p>
+                                </a>
+                              </li>
+                      <li class="nav-item">
+                      <a href="#" class="nav-link" onclick="menuEvent(this, 'idm');" id="menu13">
+                                  <i class="far fa-circle nav-icon"></i>
+                                  <p>TI</p>
+                                </a>
+                              </li>
+                      <li class="nav-item">
+                      <a href="#" class="nav-link" onclick="menuEvent(this, 'idm');" id="menu14">
+                                  <i class="far fa-circle nav-icon"></i>
+                                  <p>ST마이크로</p>
+                                </a>
+                              </li>
+                      <li class="nav-item">
+                      <a href="#" class="nav-link" onclick="menuEvent(this, 'idm');" id="menu15">
+                                  <i class="far fa-circle nav-icon"></i>
+                                  <p>Renesas</p>
+                                </a>
+                              </li>
+                      <li class="nav-item">
+                      <a href="#" class="nav-link" onclick="menuEvent(this, 'idm');" id="menu16">
+                                  <i class="far fa-circle nav-icon"></i>
+                                  <p>소니</p>
+                                </a>
+                              </li>
+                      <li class="nav-item">
+                      <a href="#" class="nav-link" onclick="menuEvent(this, 'idm');" id="menu17">
+                                  <i class="far fa-circle nav-icon"></i>
+                                  <p>후지쯔</p>
+                                </a>
+                              </li>
+                      <li class="nav-item">
+                      <a href="#" class="nav-link" onclick="menuEvent(this, 'idm');" id="menu18">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>웨스턴디지털</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link" onclick="menuEvent(this, 'idm');" id="menu19">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>키옥시아</p>
+                  </a>
+                </li>
+                </ul>
+              </li>
+              <li class="nav-item" id="fabless">
+                <a href="#" class="nav-link" id="fablessTitle">
+                  <i class="nav-icon far fa-circle text-info"></i>
+                  <p>
+                    Fabless
+                    <i class="fas fa-angle-left right"></i>
+                      <span class="badge badge-info right">8</span>
+                              </p>
+                            </a>
+                            <ul class="nav nav-treeview" style="display: none;">
+                              <li class="nav-item">
+                      <a href="#" class="nav-link" onclick="menuEvent(this, 'fabless');" id="menu20">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>퀄컴</p>
+                      </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#" class="nav-link" onclick="menuEvent(this, 'fabless');" id="menu21">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>브로드컴</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#" class="nav-link" onclick="menuEvent(this, 'fabless');" id="menu22">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>자일링스</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#" class="nav-link" onclick="menuEvent(this, 'fabless');" id="menu23">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>엔비디아</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#" class="nav-link" onclick="menuEvent(this, 'fabless');" id="menu24">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>AMD</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#" class="nav-link" onclick="menuEvent(this, 'fabless');" id="menu25">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>미디어텍</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#" class="nav-link" onclick="menuEvent(this, 'fabless');" id="menu26">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>하이실리콘</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#" class="nav-link" onclick="menuEvent(this, 'fabless');" id="menu27">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>LX세미콘</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item" id="foundry">
+                      <a href="#" class="nav-link" id="foundryTitle">
+                        <i class="nav-icon far fa-circle text-info"></i>
+                        <p>
+                          Foundry
+                          <i class="fas fa-angle-left right"></i>
+                      <span class="badge badge-info right">5</span>
+                              </p>
+                            </a>
+                            <ul class="nav nav-treeview" style="display: none;">
+                              <li class="nav-item">
+                      <a href="#" class="nav-link" onclick="menuEvent(this, 'foundry');" id="menu28">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>TSMC</p>
+                      </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#" class="nav-link" onclick="menuEvent(this, 'foundry');" id="menu29">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>글로벌파운드리즈</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#" class="nav-link" onclick="menuEvent(this, 'foundry');" id="menu30">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>UMC</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#" class="nav-link" onclick="menuEvent(this, 'foundry');" id="menu31">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>SMIC</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#" class="nav-link" onclick="menuEvent(this, 'foundry');" id="menu32">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>DB하이텍</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+         </ul>
+        </li>
+      </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div></div></div><div class="os-scrollbar os-scrollbar-horizontal os-scrollbar-unusable os-scrollbar-auto-hidden"><div class="os-scrollbar-track"><div class="os-scrollbar-handle" style="width: 100%; transform: translate(0px, 0px);"></div></div></div><div class="os-scrollbar os-scrollbar-vertical os-scrollbar-unusable os-scrollbar-auto-hidden"><div class="os-scrollbar-track"><div class="os-scrollbar-handle" style="height: 100%; transform: translate(0px, 0px);"></div></div></div><div class="os-scrollbar-corner"></div></div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper" style="min-height: 813px;">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0"><font size="5em" id="titleName">전체</font></h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item active" id="directName">Main</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+          <div class="row">
+          <!-- Left col -->
+          <div class="col-md-8" style="position:relative;">
+               <div class="row" style="padding-left:7px;padding-right:7px;">
+              <div id="newsList1"></div>
+              <div id="paging" style="width:100%; display:inline-block; border-radius:5px; border: 0px solid #D5D5D5; text-align: center; margin-bottom: 10px;"></div>
+            </div>
+            </div>
+          <!-- /.col -->
+
+          <!-- Right col -->
+          <div class="col-md-4">
+
+            <div class="card card-Primary card-outline">
+              <div class="card-header">
+                <h3 class="card-title">
+                  <i class="fas fa-tag"></i>
+                  <font size="3em"><strong>&nbsp;&nbsp;금주의 키워드</strong></font>
+                </h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="card-body">
+
+            <div id="myCanvasContainer" style="position: relative; overflow: auto;">
+              <canvas width="400" height="300" style="height: 100%;margin: auto;display: block;" id="myCanvas">
+               <p>Anything in here will be replaced on browsers that support the canvas element</p>
+              </canvas>
+            </div>
+             <div id="tags" style="font-size: 50%;font-family: 'Nanum Gothic', sans-serif;">
+             </div>
+
+              </div>
+              <!-- /.card-body-->
+            </div>
+
+            <div class="card card-Primary card-outline">
+              <div class="card-header">
+                <h3 class="card-title">
+                  <i class="fas fa-bullhorn"></i>
+                  <font size="3em"><strong>&nbsp;&nbsp;오늘의 이슈</strong></font>
+                </h3>
+            <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+
+           <div class="card-body p-0">
+                <table class="table">
+                  <tbody id="newList3">
+              </tbody>
+                </table>
+              </div>
+              <!-- /.card-body-->
+            </div>
+          <!-- /.col -->
+
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <footer class="main-footer">
+    <strong>Copyright © 2021-2022 NewSpace</a>.</strong>
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 1.0.0-beta1
+    </div>
+  </footer>
+
+
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS -->
+<script src="plugins/chart.js/Chart.min.js"></script>
+<!-- Sparkline -->
+<script src="plugins/sparklines/sparkline.js"></script>
+<!-- JQVMap -->
+<script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="plugins/moment/moment.min.js"></script>
+<script src="plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="plugins/summernote/summernote-bs4.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- App -->
+<script src="dist/js/adminlte.js"></script>
+<!-- for demo purposes -->
+<script src="dist/js/demo.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="dist/js/newspace.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<!-- dashboard demo (This is only for demo purposes) -->
+<script src="jquery.tagcanvas.min.js" type="text/javascript"></script>
+<div class="jqvmap-label" style="display: none;"></div></body></html>
