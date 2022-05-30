@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-﻿## NewSpace :rocket:
-=======
 ## NewSpace :rocket:
->>>>>>> 8651dd5a29957cc1ea950b3a7efa04ff9a4f9f97
 ![header](https://capsule-render.vercel.app/api?type=egg&color=#ffffff&height=200&section=header)
 
 >**_2022 SW산학연계 프로젝트  
