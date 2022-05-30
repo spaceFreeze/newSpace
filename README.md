@@ -1,5 +1,4 @@
 ## NewSpace :rocket:
-![header](https://capsule-render.vercel.app/api?type=egg&color=#ffffff&height=200&section=header)
 
 >**_2022 SW산학연계 프로젝트  
 "반도체 시장 관련 정보 및 Trend를 제공하는 의사결정 지원도구 개발"_**  
@@ -68,4 +67,3 @@
 -  관심 기업 및 카테고리별 트렌드 파악
 
 →  기업 경영진 맞춤형 의사 결정 지원 도구 제공
-![Footer](https://capsule-render.vercel.app/api?type=waving&color=#ffffff&height=200&section=footer)
